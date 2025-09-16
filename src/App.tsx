@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RoleSelection from "./pages/RoleSelection";
 import DashboardLayout from "./components/layout/DashboardLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import ManageFaculty from "./pages/admin/ManageFaculty";
 import FacultyDashboard from "./pages/faculty/FacultyDashboard";
 import StudentDashboard from "./pages/student/StudentDashboard";
 import NotFound from "./pages/NotFound";
@@ -23,7 +24,7 @@ const App = () => (
           
           {/* Admin Routes */}
           <Route path="/admin" element={<DashboardLayout><AdminDashboard /></DashboardLayout>} />
-          <Route path="/admin/faculty" element={<DashboardLayout><div className="p-8"><h1 className="text-2xl font-bold">Faculty Management</h1><p className="text-muted-foreground mt-2">Coming soon...</p></div></DashboardLayout>} />
+          <Route path="/admin/faculty" element={<DashboardLayout><ManageFaculty /></DashboardLayout>} />
           <Route path="/admin/students" element={<DashboardLayout><div className="p-8"><h1 className="text-2xl font-bold">Student Management</h1><p className="text-muted-foreground mt-2">Coming soon...</p></div></DashboardLayout>} />
           <Route path="/admin/timetable" element={<DashboardLayout><div className="p-8"><h1 className="text-2xl font-bold">Timetable Generator</h1><p className="text-muted-foreground mt-2">Coming soon...</p></div></DashboardLayout>} />
           <Route path="/admin/requests" element={<DashboardLayout><div className="p-8"><h1 className="text-2xl font-bold">Requests Inbox</h1><p className="text-muted-foreground mt-2">Coming soon...</p></div></DashboardLayout>} />
