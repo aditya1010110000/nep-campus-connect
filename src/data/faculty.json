@@ -1,0 +1,44 @@
+[
+  {
+    "id": "F001",
+    "name": "Dr. Sharma",
+    "department": "Computer Science",
+    "designation": "Professor",
+    "preferences": {
+      "preferred_days": ["Monday", "Wednesday", "Friday"],
+      "preferred_time_slots": ["10:00-12:00", "14:00-16:00"],
+      "preferred_rooms": ["CS-101", "CS-102"]
+    },
+    "home_distance": 5.2,
+    "max_courses_per_day": 2,
+    "specializations": ["Algorithms", "Data Structures", "Machine Learning"]
+  },
+  {
+    "id": "F002",
+    "name": "Dr. Patel",
+    "department": "Electronics",
+    "designation": "Associate Professor",
+    "preferences": {
+      "preferred_days": ["Tuesday", "Thursday"],
+      "preferred_time_slots": ["09:00-11:00", "13:00-15:00"],
+      "preferred_rooms": ["EC-201", "EC-202"]
+    },
+    "home_distance": 3.8,
+    "max_courses_per_day": 3,
+    "specializations": ["Digital Electronics", "VLSI Design", "Microprocessors"]
+  },
+  {
+    "id": "F003",
+    "name": "Dr. Singh",
+    "department": "Mathematics",
+    "designation": "Assistant Professor",
+    "preferences": {
+      "preferred_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "preferred_time_slots": ["08:00-10:00", "11:00-13:00"],
+      "preferred_rooms": ["MA-301", "MA-302"]
+    },
+    "home_distance": 7.5,
+    "max_courses_per_day": 2,
+    "specializations": ["Calculus", "Linear Algebra", "Discrete Mathematics"]
+  }
+]

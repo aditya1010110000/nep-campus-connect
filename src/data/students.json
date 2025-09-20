@@ -1,0 +1,38 @@
+[
+  {
+    "id": "S001",
+    "name": "Rahul Kumar",
+    "batch": "CSE-2023",
+    "semester": 3,
+    "electives": ["CS301", "CS305"],
+    "credits_registered": 20,
+    "credits_completed": 40
+  },
+  {
+    "id": "S002",
+    "name": "Priya Sharma",
+    "batch": "ECE-2023",
+    "semester": 3,
+    "electives": ["EC301", "EC304"],
+    "credits_registered": 18,
+    "credits_completed": 38
+  },
+  {
+    "id": "S003",
+    "name": "Amit Singh",
+    "batch": "CSE-2023",
+    "semester": 3,
+    "electives": ["CS301", "CS306"],
+    "credits_registered": 22,
+    "credits_completed": 42
+  },
+  {
+    "id": "S004",
+    "name": "Neha Gupta",
+    "batch": "ME-2023",
+    "semester": 3,
+    "electives": ["ME301", "ME304"],
+    "credits_registered": 19,
+    "credits_completed": 39
+  }
+]
