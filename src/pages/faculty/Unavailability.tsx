@@ -137,7 +137,7 @@ const UnavailabilityRequest = () => {
               <tbody>
                 {timeSlots.map(timeSlot => (
                   <tr key={timeSlot}>
-                    <td className="border border-gray-200 p-3 bg-gray-50 font-medium text-gray-700 text-sm">
+                    <td className="border border-gray-200 p-3 bg-gray-50 font-medium text-gray-700 text-xs">
                       {timeSlot}
                     </td>
                     {days.map(day => {
@@ -147,15 +147,15 @@ const UnavailabilityRequest = () => {
                       return (
                         <td 
                           key={key}
-                          className="border border-gray-200 p-0"
+                          className="border border-blue-600 p-0"
                         >
                           <div
-                            className={`${getCellStyling(day, timeSlot)} p-3 h-full min-h-16 flex flex-col justify-center text-center text-sm transition-all duration-200`}
+                            className={`${getCellStyling(day, timeSlot)} m-2 h-full min-h-16 flex flex-col justify-center text-center text-sm transition-all duration-200`}
                             onClick={() => handleCellClick(day, timeSlot)}
                           >
                             {lecture ? (
                               <>
-                                <div className="font-medium">{lecture.course}</div>
+                                <div className="text-xs">{lecture.course}</div>
                                 <div className="text-xs opacity-90">{lecture.room}</div>
                               </>
                             ) : (

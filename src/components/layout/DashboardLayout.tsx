@@ -107,13 +107,13 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                 >
                   <Avatar className="h-10 w-10">
                     <AvatarImage src="" alt={user.name} />
-                    <AvatarFallback className="bg-primary text-primary-foreground">
+                    <AvatarFallback className="bg-blue-900 text-primary-foreground">
                       {user.name.charAt(0).toUpperCase()}
                     </AvatarFallback>
                   </Avatar>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56" align="end">
+              <DropdownMenuContent className="w-56 bg-white" align="end">
                 <div className="flex items-center justify-start gap-2 p-2">
                   <div className="flex flex-col space-y-1 leading-none">
                     <p className="font-medium">{user.name}</p>
@@ -218,7 +218,7 @@ const DashboardSidebar = ({ user }: { user: User }) => {
     <Sidebar className={isCollapsed ? "w-14" : "w-60"} collapsible="icon">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-sidebar-primary font-medium">
+          <SidebarGroupLabel className="text-sidebar-primary font-medium ">
             {user.role.charAt(0).toUpperCase() + user.role.slice(1)} Portal
           </SidebarGroupLabel>
           <SidebarGroupContent>

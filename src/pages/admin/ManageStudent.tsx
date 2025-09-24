@@ -63,56 +63,261 @@ export default function ManageStudentPage() {
     status: "Active" as "Active" | "Inactive"
   });
 
-  const [students, setStudents] = useState<Student[]>([
-    {
-      id: "S001",
-      name: "Rahul Kumar",
-      email: "rahul.kumar@student.edu",
-      batch: "CSE-2023",
-      semester: 3,
-      electives: ["CS301", "CS305"],
-      creditsRegistered: 20,
-      creditsCompleted: 40,
-      status: "Active",
-      enrollmentDate: "2023-08-15"
-    },
-    {
-      id: "S002",
-      name: "Priya Sharma",
-      email: "priya.sharma@student.edu",
-      batch: "ECE-2023",
-      semester: 3,
-      electives: ["EC301", "EC302"],
-      creditsRegistered: 22,
-      creditsCompleted: 44,
-      status: "Active",
-      enrollmentDate: "2023-08-15"
-    },
-    {
-      id: "S003",
-      name: "Arjun Singh",
-      email: "arjun.singh@student.edu",
-      batch: "ME-2022",
-      semester: 5,
-      electives: ["ME401", "ME403"],
-      creditsRegistered: 18,
-      creditsCompleted: 72,
-      status: "Active",
-      enrollmentDate: "2022-08-10"
-    },
-    {
-      id: "S004",
-      name: "Sneha Patel",
-      email: "sneha.patel@student.edu",
-      batch: "CSE-2024",
-      semester: 1,
-      electives: [],
-      creditsRegistered: 24,
-      creditsCompleted: 0,
-      status: "Active",
-      enrollmentDate: "2024-08-20"
-    }
-  ]);
+const [students, setStudents] = useState<Student[]>([
+  {
+    id: "S001",
+    name: "Rahul Kumar",
+    email: "rahul.kumar@student.edu",
+    batch: "CSE-2023",
+    semester: 3,
+    electives: ["CS301", "CS305"],
+    creditsRegistered: 20,
+    creditsCompleted: 40,
+    status: "Active",
+    enrollmentDate: "2023-08-15"
+  },
+  {
+    id: "S002",
+    name: "Priya Sharma",
+    email: "priya.sharma@student.edu",
+    batch: "ECE-2023",
+    semester: 3,
+    electives: ["EC301", "EC302"],
+    creditsRegistered: 22,
+    creditsCompleted: 44,
+    status: "Active",
+    enrollmentDate: "2023-08-15"
+  },
+  {
+    id: "S003",
+    name: "Arjun Singh",
+    email: "arjun.singh@student.edu",
+    batch: "ME-2022",
+    semester: 5,
+    electives: ["ME401", "ME403"],
+    creditsRegistered: 18,
+    creditsCompleted: 72,
+    status: "Active",
+    enrollmentDate: "2022-08-10"
+  },
+  {
+    id: "S004",
+    name: "Sneha Patel",
+    email: "sneha.patel@student.edu",
+    batch: "CSE-2024",
+    semester: 1,
+    electives: [],
+    creditsRegistered: 24,
+    creditsCompleted: 0,
+    status: "Active",
+    enrollmentDate: "2024-08-20"
+  },
+  {
+    id: "S005",
+    name: "Kunal Verma",
+    email: "kunal.verma@student.edu",
+    batch: "IT-2023",
+    semester: 3,
+    electives: ["IT301", "IT305"],
+    creditsRegistered: 21,
+    creditsCompleted: 42,
+    status: "Active",
+    enrollmentDate: "2023-08-16"
+  },
+  {
+    id: "S006",
+    name: "Ananya Gupta",
+    email: "ananya.gupta@student.edu",
+    batch: "CE-2022",
+    semester: 5,
+    electives: ["CE401"],
+    creditsRegistered: 20,
+    creditsCompleted: 70,
+    status: "Active",
+    enrollmentDate: "2022-08-12"
+  },
+  {
+    id: "S007",
+    name: "Rohit Yadav",
+    email: "rohit.yadav@student.edu",
+    batch: "EE-2021",
+    semester: 7,
+    electives: ["EE701", "EE705"],
+    creditsRegistered: 19,
+    creditsCompleted: 105,
+    status: "Active",
+    enrollmentDate: "2021-08-05"
+  },
+  {
+    id: "S008",
+    name: "Meera Nair",
+    email: "meera.nair@student.edu",
+    batch: "ECE-2024",
+    semester: 1,
+    electives: [],
+    creditsRegistered: 23,
+    creditsCompleted: 0,
+    status: "Active",
+    enrollmentDate: "2024-08-22"
+  },
+  {
+    id: "S009",
+    name: "Aditya Mishra",
+    email: "aditya.mishra@student.edu",
+    batch: "CSE-2022",
+    semester: 5,
+    electives: ["CS401", "CS405"],
+    creditsRegistered: 20,
+    creditsCompleted: 75,
+    status: "Active",
+    enrollmentDate: "2022-08-11"
+  },
+  {
+    id: "S010",
+    name: "Ishita Reddy",
+    email: "ishita.reddy@student.edu",
+    batch: "ME-2023",
+    semester: 3,
+    electives: ["ME301"],
+    creditsRegistered: 22,
+    creditsCompleted: 40,
+    status: "Active",
+    enrollmentDate: "2023-08-17"
+  },
+  {
+    id: "S011",
+    name: "Saurabh Jain",
+    email: "saurabh.jain@student.edu",
+    batch: "CSE-2021",
+    semester: 7,
+    electives: ["CS701", "CS703"],
+    creditsRegistered: 18,
+    creditsCompleted: 110,
+    status: "Active",
+    enrollmentDate: "2021-08-08"
+  },
+  {
+    id: "S012",
+    name: "Tanvi Deshmukh",
+    email: "tanvi.deshmukh@student.edu",
+    batch: "IT-2024",
+    semester: 1,
+    electives: [],
+    creditsRegistered: 24,
+    creditsCompleted: 0,
+    status: "Active",
+    enrollmentDate: "2024-08-25"
+  },
+  {
+    id: "S013",
+    name: "Vikas Choudhary",
+    email: "vikas.choudhary@student.edu",
+    batch: "CE-2023",
+    semester: 3,
+    electives: ["CE301"],
+    creditsRegistered: 20,
+    creditsCompleted: 39,
+    status: "Active",
+    enrollmentDate: "2023-08-19"
+  },
+  {
+    id: "S014",
+    name: "Simran Kaur",
+    email: "simran.kaur@student.edu",
+    batch: "EE-2022",
+    semester: 5,
+    electives: ["EE401", "EE403"],
+    creditsRegistered: 21,
+    creditsCompleted: 71,
+    status: "Active",
+    enrollmentDate: "2022-08-14"
+  },
+  {
+    id: "S015",
+    name: "Rajat Sharma",
+    email: "rajat.sharma@student.edu",
+    batch: "ECE-2021",
+    semester: 7,
+    electives: ["EC701"],
+    creditsRegistered: 20,
+    creditsCompleted: 108,
+    status: "Active",
+    enrollmentDate: "2021-08-07"
+  },
+  {
+    id: "S016",
+    name: "Nikita Joshi",
+    email: "nikita.joshi@student.edu",
+    batch: "CSE-2023",
+    semester: 3,
+    electives: ["CS303"],
+    creditsRegistered: 22,
+    creditsCompleted: 41,
+    status: "Active",
+    enrollmentDate: "2023-08-18"
+  },
+  {
+    id: "S017",
+    name: "Harsh Vardhan",
+    email: "harsh.vardhan@student.edu",
+    batch: "ME-2024",
+    semester: 1,
+    electives: [],
+    creditsRegistered: 23,
+    creditsCompleted: 0,
+    status: "Active",
+    enrollmentDate: "2024-08-23"
+  },
+  {
+    id: "S018",
+    name: "Shreya Iyer",
+    email: "shreya.iyer@student.edu",
+    batch: "CE-2021",
+    semester: 7,
+    electives: ["CE701", "CE705"],
+    creditsRegistered: 18,
+    creditsCompleted: 109,
+    status: "Active",
+    enrollmentDate: "2021-08-09"
+  },
+  {
+    id: "S019",
+    name: "Manish Pandey",
+    email: "manish.pandey@student.edu",
+    batch: "IT-2022",
+    semester: 5,
+    electives: ["IT401"],
+    creditsRegistered: 21,
+    creditsCompleted: 72,
+    status: "Active",
+    enrollmentDate: "2022-08-13"
+  },
+  {
+    id: "S020",
+    name: "Aditi Saxena",
+    email: "aditi.saxena@student.edu",
+    batch: "CSE-2024",
+    semester: 1,
+    electives: [],
+    creditsRegistered: 24,
+    creditsCompleted: 0,
+    status: "Active",
+    enrollmentDate: "2024-08-21"
+  },
+  {
+    id: "S021",
+    name: "Mohit Bansal",
+    email: "mohit.bansal@student.edu",
+    batch: "EE-2023",
+    semester: 3,
+    electives: ["EE301", "EE305"],
+    creditsRegistered: 20,
+    creditsCompleted: 42,
+    status: "Active",
+    enrollmentDate: "2023-08-20"
+  }
+]);
+
 
   const filteredStudents = students.filter(student =>
     student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -228,7 +433,7 @@ export default function ManageStudentPage() {
             <GraduationCap className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{students.length}</div>
+            <div className="text-2xl font-bold">934</div>   {/* tho here it was student.length */}
             <div className="flex items-center text-xs text-green-600 mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +8% from last semester
@@ -350,7 +555,7 @@ export default function ManageStudentPage() {
                         <SelectTrigger>
                           <SelectValue placeholder="Select semester" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="bg-white">
                           {[1,2,3,4,5,6,7,8].map(sem => (
                             <SelectItem key={sem} value={sem.toString()}>{sem}</SelectItem>
                           ))}
@@ -512,7 +717,7 @@ export default function ManageStudentPage() {
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-white">
                   {[1,2,3,4,5,6,7,8].map(sem => (
                     <SelectItem key={sem} value={sem.toString()}>{sem}</SelectItem>
                   ))}
@@ -551,7 +756,7 @@ export default function ManageStudentPage() {
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-white">
                   <SelectItem value="Active">Active</SelectItem>
                   <SelectItem value="Inactive">Inactive</SelectItem>
                 </SelectContent>

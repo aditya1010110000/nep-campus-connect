@@ -63,7 +63,7 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          <Button onClick={() => navigate("/role-selection")}>
+          <Button className="" onClick={() => navigate("/role-selection")}>
             Get Started
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
@@ -73,7 +73,7 @@ export default function Landing() {
       {/* Hero Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">
             Smart Timetable Generation
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -82,18 +82,18 @@ export default function Landing() {
             minutes, not hours.
           </p>
           <div className="flex gap-4 justify-center">
-            <Button
+            {/* <Button
               size="lg"
               className="px-8 bg-blue-500 hover:bg-indigo-700 text-white"
-              onClick={() => navigate("/login")}
+              onClick={() => navigate("/role-selection")}
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+            </Button> */}
             <Button
               variant="outline"
               size="lg"
-              className="px-8 border-gray-300 text-gray-700"
+              className="px-8 bg-blue-600 text-white hover:border-2 hover:border-blue-700"
             >
               Watch Demo
             </Button>
@@ -116,14 +116,14 @@ export default function Landing() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="border border-gray-200 hover:shadow-md transition-shadow"
+                className="border  shadow-lg border-gray-200 hover:shadow-md  hover:bg-blue-600 hover:text-white rounded-3xl transform-all duration-200 hover:scale-110"
               >
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-6 h-6 text-indigo-600" />
                   </div>
                   <h3 className="font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-sm text-gray-500">{feature.description}</p>
+                  <p className="text-sm text-gray-500 hover:text-white">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}

@@ -135,7 +135,7 @@ const AdminDashboard = () => {
                       <p className="text-sm text-muted-foreground">{action.description}</p>
                     </div>
                   </div>
-                  <Button variant="outline" size="sm">
+                  <Button variant="outline" className="hover:bg-blue-500 hover:text-white hover:scale-110 transition-all duration-200" size="sm">
                     Open
                   </Button>
                 </div>

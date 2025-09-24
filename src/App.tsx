@@ -65,7 +65,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RoleSelection from "./pages/RoleSelection";
 import DashboardLayout from "./components/layout/DashboardLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
-import ManageFaculty from "./pages/admin/ManageFaculty";
 import FacultyDashboard from "./pages/faculty/FacultyDashboard";
 import StudentDashboard from "./pages/student/StudentDashboard";
 import NotFound from "./pages/NotFound";
@@ -84,6 +83,7 @@ import StudentCredits from "./pages/student/Credits";
 import EmptyClassroomPage from "./pages/student/Classroom";
 import StudentAccommodationRequest from "./pages/student/Request";
 import StudentRequestsPage from "./pages/student/Request";
+import ManageFaculty from "./pages/admin/ManageFuculty";
 
 const queryClient = new QueryClient();
 
@@ -100,7 +100,7 @@ const App = () => (
           
           {/* Admin Routes */}
           <Route path="/admin" element={<DashboardLayout><AdminDashboard /></DashboardLayout>} />
-          <Route path="/admin/faculty" element={<DashboardLayout><ManageFaculty /></DashboardLayout>} />
+          <Route path="/admin/faculty" element={<DashboardLayout><ManageFaculty/></DashboardLayout>} />
           <Route path="/admin/students" element={<DashboardLayout><ManageStudentPage /> </DashboardLayout>} />
           <Route path="/admin/timetable" element={<DashboardLayout> <TimetableGenerator /> </DashboardLayout>} />
           <Route path="/admin/requests" element={<DashboardLayout><RequestAndReport /></DashboardLayout>} />
